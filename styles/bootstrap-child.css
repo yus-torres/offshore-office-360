@@ -23,8 +23,8 @@ body.home .navbar .navbar-nav .nav-1 {}
 .navbar-toggler:hover i {}
 
 /* Custom Buttons */
-.btn { border-radius: 100px; border: 0; color: #FFFFFF; transition: all 0.5s; height: 40px; margin: 0 20px 20px 0; }
-.btn { padding-left: 32px; padding-right: 32px; }
+.btn { border-radius: 100px; border: 0; color: #FFFFFF; transition: all 0.5s; }
+.btn { padding: 14px 48px; margin: 0 20px 20px 0; font-size: 16px; height: 50px; }
 .btn:last-child { margin-right: 0; }
 .btn:focus,
 .btn:active { outline: none !important; box-shadow: none; }
@@ -41,14 +41,19 @@ body.home .navbar .navbar-nav .nav-1 {}
 .btn.disable { border-color: #CCC; color: #CCC !important; }
 .btn.disable:hover { border-color: #CCC !important; background: none !important; cursor: default; }
 
-.btn.btn-sm { padding: 5px 20px; font-size: 80%; }
-.btn.btn-md { padding: 7px 40px; font-size: 120%; }
-.btn.btn-lg { padding: 14px 40px; font-size: 140%; }
+.btn.btn-sm { height: 40px; padding: 12px 40px; font-size: 80%; }
+.btn.btn-lg { height: 60px; padding: 16px 56px; font-size: 120%; }
 
 /* Form Control */
-.form-control { height: 50px; padding: 15px; font-size: 16px; color: #333333; }
+.form-control { padding: 12px; font-size: 16px; color: #333333; height: 50px; }
 .form-control { background-color: #FFFFFF; border: 1px solid #E5E5E5; border-radius: 100px; }
-.form-control:focus { background-color: transparent; }
+
+.form-sm {  height: 40px; padding: 16px; font-size: 80%; }
+.form-lg {  height: 60px; padding: 24px; font-size: 120%; }
+
+/* Forms */
+.form-group .form-control { border-radius: 100px 0 0 100px; }
+.form-group .btn { border-radius: 0 100px 100px 0; }
 
 textarea:focus,
 input[type="text"]:focus,
@@ -68,10 +73,6 @@ input[type="color"]:focus,
 .uneditable-input:focus {
 	/*border-color: rgba(237, 27, 47, 0.8); outline: 0 none;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(237, 27, 47, 0.6);*/ }
-
-.form-sm { padding: 5px 20px; height: 32px; font-size: 80%; }
-.form-md { padding: 14px 30px; height: 62px; font-size: 120%; }
-.form-lg { padding: 20px 40px; height: 82px; font-size: 140%; }
 
 /* Modal */
 .modal-content { background-color: #330066; color: #FFFFFF; border-radius: 5px; }

@@ -67,7 +67,7 @@ $('.btn-more').click(function() {
 // ScrollSpy
 $('body').scrollspy({ offset: 100 })
 var scroll = new SmoothScroll('a[href*="#"]', {
-	offset: 60,
+	offset: 100,
 	speed: 1000
 });
 
@@ -92,4 +92,11 @@ $(document).ready(function(){
     $(".link-close").click(function(){
         $(".modal").modal('hide');
     });
+});
+
+// Heading
+$(".heading").html(function(){
+	var text= $(this).text().trim().split(" ");
+	var first = text.shift();
+	return (text.length > 0 ? "<strong>"+ first + "</strong> " : first) + text.join(" ");
 });
