@@ -88,9 +88,9 @@ input[type="color"]:focus,
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(237, 27, 47, 0.6);*/ }
 
 /* Modal */
-.modal-content { background-color: #330066; color: #FFFFFF; border-radius: 5px; }
+.modal-content { border-radius: 5px; }
 .modal-header { height: 60px; border-color: rgba(0, 0, 0, 0.4); }
-.modal-body { padding-right: 10px; height: calc(100vh - 120px); }
+.modal-body { padding-right: 10px; /*height: calc(100vh - 120px);*/ }
 .modal-body a { color: #FFFFFF; font-weight: bold; }
 .modal-body a:hover { color: #F36523; }
 .modal .close { color: #FFFFFF; text-shadow: 0 0 0 #fff; opacity: 0.4; transition: 0.3s all; }
@@ -99,3 +99,22 @@ input[type="color"]:focus,
 .card { border: 0; box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1); border-radius: 10px; }
 .card-body { position: relative; }
 .card-img-top { border-top-left-radius: 10px; border-top-right-radius: 10px; }
+
+/* Forms: Time Picker */
+.form-timepicker { position: relative; }
+.form-timepicker .btn { position: absolute; top: 0; right: 0; padding: 14px 24px; }
+.bootstrap-datetimepicker-widget { display: block !important; }
+.bootstrap-datetimepicker-widget.dropdown-menu { display: block !important; }
+
+/* Preventives and Overwrites */
+.bootstrap-datetimepicker-widget table td { height: 40px; line-height: 40px; width: 40px; }
+.bootstrap-datetimepicker-widget a[data-action] { padding: 0; }
+.bootstrap-datetimepicker-widget button[data-action] { width: 40px; }
+.bootstrap-datetimepicker-widget .btn { position: static; padding: 0; margin: 0; border-radius: 5px; background-color: #0099ff; }
+.bootstrap-datetimepicker-widget .btn:hover { background-color: #ad2bad;  }
+.bootstrap-datetimepicker-widget .btn span:hover { background-color: transparent; }
+.bootstrap-datetimepicker-widget table td span { height: 40px; line-height: 40px; width: 40px; margin: 0; }
+.bootstrap-datetimepicker-widget table td span:hover { background-color: #FFFFFF; }
+.bootstrap-datetimepicker-widget .timepicker-hour,
+.bootstrap-datetimepicker-widget .timepicker-minute,
+.bootstrap-datetimepicker-widget .timepicker-second { width: 40px; }

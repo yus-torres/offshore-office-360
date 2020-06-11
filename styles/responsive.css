@@ -58,6 +58,8 @@
 
 	.btn { white-space: nowrap; height: 50px; }
 	.btn.btn-lg { height: 60px; white-space: nowrap; font-size: 120%; }
+
+	.bootstrap-datetimepicker-widget .btn { white-space: nowrap; height: 40px; }
 }
 
 /* 960 */
