@@ -118,3 +118,11 @@ input[type="color"]:focus,
 .bootstrap-datetimepicker-widget .timepicker-hour,
 .bootstrap-datetimepicker-widget .timepicker-minute,
 .bootstrap-datetimepicker-widget .timepicker-second { width: 40px; }
+
+/* Accordion */
+.accordion { margin-bottom: 40px; }
+.accordion .card { margin-bottom: 20px; border-radius: 10px !important; }
+.accordion .accordion-panel { font-weight: bold; }
+.accordion .accordion-panel a { padding: 20px; display: block; }
+.accordion .accordion-panel i { float: right; line-height: 24px; color: #ad2bad; transition: 0.3s all; transform: rotate(0); }
+.accordion .accordion-panel .collapsed i { transform: rotate(180deg); }

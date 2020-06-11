@@ -100,3 +100,10 @@ $(".heading").html(function(){
 	var first = text.shift();
 	return (text.length > 0 ? "<strong>"+ first + "</strong> " : first) + text.join(" ");
 });
+
+// Time Picker
+$(function () {
+	$('#timepicker').datetimepicker({
+		format: 'LT'
+	});
+});
