@@ -18,6 +18,9 @@
 	
 	.floaters { bottom: 20px; }
 	.floaters.show { right: 20px; }
+
+	.btn { white-space: normal; height: auto; }
+	.btn.btn-lg { height: auto; white-space: normal; padding: 16px 56px; font-size: 100%; }
 }
 
 /* 480  */
@@ -52,6 +55,9 @@
 	
 	.floaters { bottom: 30px; }
 	.floaters.show { right: 30px; }
+
+	.btn { white-space: nowrap; height: 50px; }
+	.btn.btn-lg { height: 60px; white-space: nowrap; font-size: 120%; }
 }
 
 /* 960 */

@@ -1,8 +1,7 @@
 /* Defaults */
 body { font-family: 'Roboto'; font-size: 16px; line-height: 24px; overflow-x: hidden; }
 
-h1, h2, h3 { font-family: 'Exo Bold'; }
-h4, h5 { font-family: 'Exo'; }
+h1, h2, h3, h4, h5 { font-family: 'Exo Bold'; }
 h1 { font-size: 48px; line-height: 56px; margin-bottom: 40px; }
 h2 { font-size: 40px; line-height: 48px; margin-bottom: 40px; }
 h3 { font-size: 32px; line-height: 40px; margin-bottom: 20px; }
@@ -82,19 +81,19 @@ header .list-menu-item a:hover:before { width: 100%; }
 .fold-main .container .row ~ div { align-self: center; }
 
 /* Deck: Services */
-.deck-services .card { text-align: center; padding: 0; margin-bottom: 30px; border-radius: 10px; position: relative; box-shadow: 0 0 0; }
+.deck-services .card { text-align: center; padding: 0; margin-bottom: 30px; border-radius: 10px; position: relative; box-shadow: 0 0 0; background-color: transparent; }
 .deck-services .card h4 { font-weight: bold; }
 .deck-services .card p { margin-bottom: 0; }
-.deck-services .card-body { padding: 30px; min-height: 320px; opacity: 1; transition: 0.5s all; }
+.deck-services .card-body { padding: 30px; min-height: 320px; transition: 0.5s all; }
 .deck-services .card-body { box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1); border-radius: 10px; }
 .deck-services .card-body svg { max-height: 100px; max-width: 100px; margin-bottom: 30px; }
-.deck-services .card-back { position: absolute; background-color: blue; height: 100%; width: 100%; top: 0; color: #FFFFFF; }
-.deck-services .card-back { opacity: 0; transition: 0.5s all; border-radius: 10px; transform: rotateY(180deg); box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1); }
+.deck-services .card-back { position: absolute; background-color: blue; height: 100%; width: 100%; top: 0; color: #FFFFFF; backface-visibility: hidden; }
+.deck-services .card-back { transition: 0.5s all; border-radius: 10px; transform: rotateY(180deg); box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1); }
 .deck-services .card-back h4 { margin-bottom: 10px; }
 .deck-services .card-back svg { fill: rgba(255, 255, 255, 0.3); max-width: 240px; }
 .deck-services .card-back span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: calc(100% - 40px); }
-.deck-services .card:hover .card-body { opacity: 0; transform: rotateY(180deg); }
-.deck-services .card:hover .card-back { opacity: 1; transform: rotateY(0); }
+.deck-services .card:hover .card-body { transform: rotateY(180deg); }
+.deck-services .card:hover .card-back { transform: rotateY(0); }
 
 /* Fold: Clients */
 .fold-clients { padding: 100px 0 50px; background: #ad2bad; color: #FFFFFF; }
@@ -129,17 +128,7 @@ footer .logo-footer { max-width: 240px; margin-bottom: 30px; }
 footer p,
 footer li { line-height: 30px; }
 footer .floor { margin-top: 100px; }
-footer .list-social li { margin-right: 20px !important; }
-footer .list-social a { color: #FBED8A; position: relative; }
-footer .list-social a:hover { top: -5px; }
-
-footer .column-contact li { margin-bottom: 20px; position: relative; padding-left: 40px; }
-footer .column-contact li:before { position: absolute; left: 0; top: 0; font-family: 'Font Awesome 5 Free'; }
-footer .column-contact li:before { color: #FBED8A; font-weight: 900; width: 20px; text-align: center; }
-footer .column-contact .contact-address:before 	{ content: "\f3c5"; }
-footer .column-contact .contact-number:before 	{ content: "\f10b"; }
-footer .column-contact .contact-email:before 	{ content: "\f0e0"; }
-
+footer .list-contact li:before { color: #FBED8A; }
 footer .column-technicals { text-align: right; }
 footer .column-technicals li { margin-left: 30px; }
 
@@ -165,6 +154,20 @@ footer .column-technicals li { margin-left: 30px; }
 .list-checklist li:before { font-size: 24px; content: "\f00c"; }
 .list-checklist li:before { position: absolute; left: 0; top: 0; font-family: 'Font Awesome 5 Free'; }
 .list-checklist li:before { color: #0099ff; font-weight: 900; width: 20px; text-align: center; }
+
+/* List: Social Media */
+.list-social li { margin-right: 20px !important; }
+.list-social li a { color: #FBED8A; transition: 0.3s all; }
+.list-social li a i { transition: 0.3s all; position: relative; top: 0; }
+.list-social li a:hover i { top: -5px; }
+
+/* List: Contact Information */
+.list-contact li { margin-bottom: 20px; position: relative; padding-left: 40px; }
+.list-contact li:before { position: absolute; left: 0; top: 0; font-family: 'Font Awesome 5 Free'; }
+.list-contact li:before { color: #0165cc; font-weight: 900; width: 20px; text-align: center; }
+.list-contact .contact-address:before 	{ content: "\f3c5"; }
+.list-contact .contact-number:before 	{ content: "\f10b"; }
+.list-contact .contact-email:before 	{ content: "\f0e0"; }
 
 /* Animations */
 @keyframes beating {
