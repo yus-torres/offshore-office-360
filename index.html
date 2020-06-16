@@ -111,8 +111,9 @@
 					<!-- -->
 					<div class="col-md-5 sr-right">
 						<h1>Building your offshore team has never been easier.</h1>
-						<h4 class="mb-5">We’re here to help grow your business. No need to worry about facilities, recruitment, payroll, and operations. We’ve got you covered.</h4>
+						<h4 class="mb-3">We’re here to help grow your business. No need to worry about facilities, recruitment, payroll, and operations. We’ve got you covered.</h4>
 						<a href="#contact" class="btn btn-secondary btn-lg">Get Started</a>
+						<button class="btn btn-secondary" data-toggle="modal" data-target="#modal_newsletter" type="button">Submit</button>
 					</div>
 					<!--/ -->
 
@@ -188,9 +189,9 @@
 				<!-- /.row -->
 				
 				<!-- .row -->
-				<div class="row deck-steps mt-5">
+				<div class="row justify-content-center deck-steps mt-5">
 					<!-- -->
-					<div class="col-md-12 card-deck">
+					<div class="col-md-10  card-deck">
 						<!-- .card -->
 						<div class="card step-1 sr-up sr-delay-1">
 							<!-- .card-img-top -->
@@ -923,7 +924,7 @@
 		<!-- /.fold-services -->
 
 		<!-- .fold-newsletter -->
-		<div id="newsletter" class="fold-newsletter waves">
+		<div id="newsletter" class="fold-newsletter waves hidden">
 			<!-- .container -->
 			<div class="container">
 				<!-- .row -->
@@ -955,23 +956,23 @@
 		<!-- /.fold-newsletter -->
 
 		<!-- .fold-testimonials -->
-		<div id="testimonials" class="fold fold-testimonials shaded">
+		<div id="testimonials" class="fold fold-testimonials waves">
 			<!-- .container -->
 			<div class="container">
 				<!-- .row -->
-				<div class="row">
+				<div class="row justify-content-center">
 					<!--  -->
 					<div class="col-md-4 sr-right sr-delay-1">
-						<h5 class="fc-violet">Testimonials</h5>
+						<h5 class="fc-violet-">Testimonials</h5>
 						<h3>What Our Client's Say</h3>
 						<p>Offshore Office 360 clients and their results are the best proof that our methodologies work. But we’ve also received numerous awards and praise from the media and our peers.</p>
 
-						<a href="#" class="btn btn-primary btn-lg">Work With Us</a>
+						<a href="#" class="btn btn-secondary btn-lg">Work With Us</a>
 					</div>
 					<!-- / -->
 
 					<!--  -->
-					<div class="col-md-8 sr-left sr-delay-2">
+					<div class="col-md-6 sr-left sr-delay-2">
 						<!-- #slider_testimonials -->
 						<div id="slider_testimonials" class="carousel slide" data-ride="carousel">
 							<!-- .carousel-indicators -->
@@ -999,19 +1000,6 @@
 											<!-- /.card-body -->
 										</div>
 										<!-- /.card -->
-
-										<!-- .card -->
-										<div class="card">
-											<!-- .card-body -->
-											<div class="card-body">
-												<img src="images/img-brian-shad.jpg" class="img-fluid" alt="" />
-												<h4 class="mb-0">Brian Shad</h4>
-												<p class="fc-navy position mb-4">CEO</p>
-												<p>We love working with Jewel. Since her first day, she has performed really well and has become an integral part of ProLink.</p>
-											</div>
-											<!-- /.card-body -->
-										</div>
-										<!-- /.card -->
 									</div>
 									<!-- /.card-deck -->
 								</div>
@@ -1021,19 +1009,6 @@
 								<div class="carousel-item">
 									<!-- .card-deck -->
 									<div class="card-deck">
-										<!-- .card -->
-										<div class="card">
-											<!-- .card-body -->
-											<div class="card-body">
-												<img src="images/img-gus-friedman.jpg" class="img-fluid" alt="" />
-												<h4 class="mb-0">Gus Friedman</h4>
-												<p class="fc-navy position mb-4">Marketing Manager</p>
-												<p>Offshore Office 360 helped my business save thousands of dollars in the past 6 months. Arianna (Virtual Assistant) has been very helpful with organizing all the processes that we had trouble dealing with in the past.</p>
-											</div>
-											<!-- /.card-body -->
-										</div>
-										<!-- /.card -->
-
 										<!-- .card -->
 										<div class="card">
 											<!-- .card-body -->
@@ -1531,7 +1506,7 @@
 				<div class="row floor sr-up">
 					<!-- .copyright -->
 					<div class="col-md-12 column-copyright text-center">
-						Copyright &copy; 2020 Offshore Office 360. All Rights Reserved.
+						Copyright &copy; 2020 Offshore Office 360.<br class="for-mobile" />All Rights Reserved.
 					</div>
 					<!-- /.row -->
 				</div>
@@ -1541,7 +1516,7 @@
 		</footer>
 		<!-- /footer -->
 
-		<!-- #modal_blank -->
+		<!-- #modal_thankyou -->
 		<div class="modal fade" id="modal_thankyou" tabindex="-1" role="dialog" aria-hidden="true">
 			<!-- -->
 			<div class="modal-dialog modal-dialog-centered">
@@ -1568,7 +1543,38 @@
 			</div>
 			<!-- / -->
 		</div>
-		<!-- /#modal_terms -->
+		<!-- /#modal_thankyou -->
+
+		<!-- #modal_newsletter -->
+		<div class="modal fade modal-dark" id="modal_newsletter" tabindex="-1" role="dialog" aria-hidden="true" displayed="false">
+			<!-- -->
+			<div class="modal-dialog modal-dialog-centered">
+				<!-- -->
+				<div class="modal-content waves">
+					<!-- -->
+					<div class="modal-header">
+						<h4 class="modal-title"><strong>Do you need help with staffing your business with an offshore team?</strong></h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!-- / -->
+					
+					<!-- -->
+					<div class="modal-body">
+						<h5 class="mb-4">Leave your information below and we'll make sure to get back to you.</h5>
+						<form>
+							<div><input class="form-control" type="text" placeholder="Enter Email Address" /></div>
+							<button type="submit" class="btn btn-secondary mb-0">Subscribe</button>
+						</form>
+					</div>
+					<!-- / -->
+				</div>
+				<!-- / -->
+			</div>
+			<!-- / -->
+		</div>
+		<!-- /#modal_newsletter -->
 		
 		<script src="scripts/jquery.min.js"></script>
 		<script src="scripts/popper.min.js"></script>
@@ -1583,6 +1589,12 @@
 		<script src="scripts/scripts.js"></script>
 		<script src="scripts/customscrollbar.js"></script>
 		<script type="text/javascript">
+			$(window).scroll(function() {
+				if ($(document).scrollTop() > 3000 && $("#modal_newsletter").attr("displayed") === "false") {
+					$('#modal_newsletter').modal('show');
+					$("#modal_newsletter").attr("displayed", "true");
+				}
+			});
 		</script>
 	</body>
 </html>

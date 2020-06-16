@@ -13,7 +13,8 @@
 	
 	.fold { padding-top: 50px; padding-bottom: 50px; }
 	.fold-main { padding: 100px 0 40px 0; }
-	.fold-main h1 { font-size: 38px; line-height: 46px; }
+	.fold-main h1 { font-size: 30px; line-height: 38px; }
+	.fold-main h4 { font-size: 16px; line-height: 24px; }
 	.fold-newsletter form .btn { position: static; }
 
 	header { background: rgba(0, 0, 0, 1); }
@@ -25,6 +26,8 @@
 	.form-control { font-size: 14px; }
 	.btn { white-space: normal; height: auto; }
 	.btn.btn-lg { height: auto; white-space: normal; padding: 16px 56px; font-size: 100%; }
+
+	footer .list-links { flex: 0 0 50%; max-width: 50%; }
 }
 
 /* 480  */
@@ -53,6 +56,7 @@
 	.fold { padding-top: 150px; padding-bottom: 150px; }
 	.fold-main { padding: 0; }
 	.fold-main h1 { font-size: 40px; line-height: 48px; }
+	.fold-main h4 { font-size: 24px; line-height: 32px; }
 	.fold-newsletter form .btn { position: absolute; }
 	
 	header { background: rgba(0, 0, 0, 0); }

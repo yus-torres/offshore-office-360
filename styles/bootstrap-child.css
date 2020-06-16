@@ -103,6 +103,7 @@ input[type="color"]:focus,
 /* Forms: Time Picker */
 .form-timepicker { position: relative; }
 .form-timepicker .btn { position: absolute; top: 0; right: 0; padding: 14px 24px; }
+
 .bootstrap-datetimepicker-widget { display: block !important; }
 .bootstrap-datetimepicker-widget.dropdown-menu { display: block !important; }
 
