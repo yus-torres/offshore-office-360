@@ -204,3 +204,6 @@
 
 .input-group [data-toggle="datetimepicker"] {
   cursor: pointer; }
+
+  /* Preventives and Overwrites */
+ .form-control.datetimepicker-input { /*height: 52px;*/ }

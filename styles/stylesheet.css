@@ -30,7 +30,7 @@ table { width: 100%; }
 .waves:before { background-image: url(../images/patt-waves.png); mix-blend-mode: overlay; }
 .shaded { background-color: #f4f6fd; }
 
-.fold { overflow-x: hidden; min-height: 100vh; padding-top: 150px; padding-bottom: 150px; }
+.fold { /*overflow-x: hidden;*/ min-height: 100vh; padding-top: 150px; padding-bottom: 150px; }
 .fold { background-position: center; background-repeat: no-repeat; background-attachment: fixed; }
 
 /* Line Heights */
@@ -46,6 +46,13 @@ table { width: 100%; }
 .fc-violet	{ color: #ad2bad; }
 .fc-blue	{ color: #0099ff; }
 .fc-red		{ color: #EC254C; }
+
+/* Decorations */
+.decor { position: relative; }
+.decor::before { position: absolute; width: 100%; height: 100%; content: ""; top: 0; }
+.decor::before { background-repeat: no-repeat; background-size: contain; }
+.decor-1::before { background-image: url(../images/decor-1.png); background-position: left top; }
+.decor-2::before { background-image: url(../images/decor-2.png); background-position: right top; }
 
 /* Header */
 header { position: fixed; width: 100%; left: 0; top: 0; z-index: 100; }
@@ -82,6 +89,7 @@ header .list-menu-item a:hover:before { width: 100%; }
 .fold-main .container .row ~ div { align-self: center; }
 
 /* Deck: Steps */
+.deck-steps .card { margin-bottom: 80px; }
 .deck-steps .card h5 { position: relative; z-index: 1; transition: 0.3s all; }
 .deck-steps .card span { height: 100px; border-radius: 10px; background-color: #2f2bad; text-align: center; transition: 0.3s all; }
 .deck-steps .card span { line-height: 100px; display: block; position: absolute; top: -50px; left: 50%; width: 100px; }
@@ -99,11 +107,6 @@ header .list-menu-item a:hover:before { width: 100%; }
 .deck-steps .step-2 span { background-color: #2f2bad; }
 .deck-steps .step-3 span { background-color: #ad2bad; }
 
-.deck-steps- .card:nth-child(even) { flex-direction: column-reverse; }
-.deck-steps- .card:nth-child(even) .card-body { padding: 30px 50px 100px; }
-.deck-steps- .card:nth-child(even) .card-body span { bottom: -50px; top: auto; }
-.deck-steps- .card:nth-child(even) .card-img-top { border-radius: 0 0 10px 10px; }
-
 /* Deck: Services */
 .deck-services .card { text-align: center; padding: 0; margin-bottom: 30px; border-radius: 10px; }
 .deck-services .card { position: relative; box-shadow: 0 0 0; background-color: transparent; }
@@ -111,7 +114,7 @@ header .list-menu-item a:hover:before { width: 100%; }
 .deck-services .card p { margin-bottom: 0; display: none; }
 .deck-services .card-body { padding: 30px; min-height: 320px; transition: 0.5s all; }
 .deck-services .card-body { box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1); border-radius: 10px; }
-.deck-services .card-body svg { max-height: 100px; max-width: 100px; margin-bottom: 30px; margin-top: 40px;}
+.deck-services .card-body svg { max-height: 80px; max-width: 80px; margin-bottom: 30px; margin-top: 40px; }
 .deck-services .card-back { position: absolute; background: linear-gradient(#2f2bad 0%, #0099ff 100%); }
 .deck-services .card-back { width: 100%; top: 0; color: #FFFFFF; backface-visibility: hidden; height: 100%; }
 .deck-services .card-back { transition: 0.5s all; border-radius: 10px; transform: rotateY(180deg); box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1); }
@@ -142,9 +145,6 @@ header .list-menu-item a:hover:before { width: 100%; }
 #slider_testimonials .carousel-indicators li { background-color: #2f2bad; opacity: 1; border-radius: 10px; border: 0; }
 #slider_testimonials .carousel-indicators li.active { background-color: #2f2bad; width: 40px; }
 
-/* Fold: FAQ */
-.fold-faq {}
-
 /* Fold: Clients */
 .fold-clients { padding: 100px 0 50px; background: #ad2bad; color: #FFFFFF; }
 .fold-clients { /*background: linear-gradient(rgba(173,43,173,1) 0%, rgba(47,43,173,1) 50%);*/ }
@@ -174,10 +174,10 @@ footer { color: #FFFFFF; padding-top: 150px; padding-bottom: 50px; }
 footer { background-position: top; background-size: cover; background-color: #0165cc; }
 footer a { color: #FFFFFF; }
 footer a:hover { color: #FBED8A; }
-footer .logo-footer { max-width: 240px; margin-bottom: 30px; }
+footer .logo-footer { max-width: 240px; margin-bottom: 20px; }
 footer p,
 footer li { line-height: 30px; }
-footer .floor { margin-top: 100px; }
+footer .floor { margin-top: 50px; }
 footer .list-contact li:before { color: #FBED8A; }
 footer .column-technicals { text-align: right; }
 footer .column-technicals li { margin-left: 30px; }
@@ -219,7 +219,15 @@ footer .column-technicals li { margin-left: 30px; }
 .list-contact .contact-number:before 	{ content: "\f10b"; }
 .list-contact .contact-email:before 	{ content: "\f0e0"; }
 
+/* List: Quick Links */
+.list-links { overflow: hidden; }
+.list-links li { margin-bottom: 10px; position: relative; padding-left: 25px; margin-left: -25px;  transition: 0.3s all; }
+.list-links li:before { content: "\f105"; color: #FBED8A; font-weight: 900; }
+.list-links li:before { position: absolute; left: 0; top: 0; font-family: 'Font Awesome 5 Free'; }
+.list-links li:hover { margin-left: 0; }
+
 /* Scroll Down */
+.icon-scroll { position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 0); }
 .icon-scroll { display: block; text-align: center; color: #FFFFFF; width: 100px; height: 80px; margin: 0 auto; overflow: hidden; }
 .icon-scroll div { width: 32px; height: 48px; border: 2px solid #FFFFFF; border-radius: 32px; }
 .icon-scroll div { margin: 20px auto 10px; position: relative; transition: 0.3s all; }
