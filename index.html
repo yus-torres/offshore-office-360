@@ -5,16 +5,20 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Offshore Office 360</title>
-		<link href="styles/fonts.css" rel="stylesheet">
-		<link href="styles/bootstrap.min.css" rel="stylesheet">
-		<link href="styles/bootstrap-tempusdominus.min.css" rel="stylesheet">
-		<link href="styles/bootstrap-child.css" rel="stylesheet">
-		<link href="styles/fontawesome-all.css" rel="stylesheet">
-		<link href="styles/stylesheet.css" rel="stylesheet">
-		<link href="styles/slick.css" rel="stylesheet">
-		<link href="styles/menufullpage.css" rel="stylesheet">
-		<link href="styles/customscrollbar.css" rel="stylesheet">
-		<link href="styles/responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="styles/fonts.css">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/bootstrap-tempusdominus.min.css">
+		<link rel="stylesheet" href="styles/bootstrap-child.css">
+		<link rel="stylesheet" href="styles/fontawesome-all.css">
+		<link rel="stylesheet" href="styles/stylesheet.css">
+		<link rel="stylesheet" href="styles/slick.css">
+		<link rel="stylesheet" href="styles/menufullpage.css">
+		<link rel="stylesheet" href="styles/customscrollbar.css">
+		<link rel="stylesheet" href="styles/responsive.css">
+		<link rel="stylesheet" href="styles/choices.css">
+
+		<!-- Initialize Scripts -->
+        <script src="scripts/choices.min.js"></script>
 	</head>
 
 	<body data-spy="scroll" data-target="#nav_menu">
@@ -193,10 +197,6 @@
 					<div class="col-md-10  card-deck">
 						<!-- .card -->
 						<div class="card step-1 sr-up sr-delay-1">
-							<!-- .card-img-top -->
-							<div class="card-img-top hidden"><img src="images/img-step-1.jpg" class="img-fluid" alt=""></div>
-							<!-- /.card-img-top -->
-
 							<!-- .card-body -->
 							<div class="card-body">
 								<span class="waves">1</span>
@@ -1134,7 +1134,7 @@
 		<!-- /.fold-about -->
 
 		<!-- .fold-blog -->
-		<div id="blog" class="fold fold-blog shaded hidden" style="background-image: url(images/bg-shape-1.png);">
+		<div id="blog" class="fold fold-blog shaded hidden">
 			<!-- .container -->
 			<div class="container">
 				<!-- .row -->
@@ -1261,7 +1261,7 @@
 					<!-- .row -->
 					<div class="row justify-content-center">
 						<!--  -->
-						<div class="col-md-5 sr-right">
+						<div class="col-md-6 sr-right">
 							<!-- -->
 							<div class="row">
 								<!-- -->
@@ -1317,32 +1317,22 @@
 						<!-- / -->
 
 						<!--  -->
-						<div class="col-md-5 sr-left">
+						<div class="col-md-6 sr-left">
 							<!-- -->
 							<div class="row">
 								<!-- -->
 								<div class="col-md-12">
 									<!-- -->
-									<div class="dropdown">
-										<button class="btn dropdown-toggle" type="button" id="what_services" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											What services would you like to inquire about
-										</button>
-
-										<!-- .dropdown-menu -->
-										<div class="dropdown-menu" aria-labelledby="what_services">
-											<a class="dropdown-item" href="#">Virtual Assistant</a>
-											<a class="dropdown-item" href="#">Tech Support Voice</a>
-											<a class="dropdown-item" href="#">Teach Support Non-voice</a>
-											<div class="dropdown-divider"></div>
-											<p>Digital Marketing</p>
-											<a class="dropdown-item" href="#">Web Design, development, and maintenance</a>
-											<a class="dropdown-item" href="#">Social Media Marketing</a>
-											<div class="dropdown-divider"></div>
-											<a class="dropdown-item" href="#">Transcriptionists</a>
-											<a class="dropdown-item" href="#">Others</a>
-										</div>
-										<!-- /.dropdown-menu -->
-									</div>
+									<select id="what_services_new" class="form-control" placeholder="What services would you like to inquire about" multiple>
+                                        <option value="Virtual Assistant">Virtual Assistant</option>
+                                        <option value="Tech Support Voice">Tech Support Voice</option>
+                                        <option value="Teach Support Non-voice">Teach Support Non-voice</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
+                                        <option value="Web Design, development, and maintenance">Web Design, development, and maintenance</option>
+                                        <option value="Social Media Marketing">Social Media Marketing</option>
+                                        <option value="Transcriptionists">Transcriptionists</option>
+                                        <option value="Others">Others</option>
+									</select>
 									<!-- / -->
 								</div>
 								<!-- / -->
@@ -1429,9 +1419,9 @@
 					<!-- /.row -->
 
 					<!-- -->
-					<div class="row justify-content-center">
+					<div class="row">
 						<!-- -->
-						<div class="col-md-10 sr-right">
+						<div class="col-md-6 sr-right">
 							<button class="btn btn-secondary" data-toggle="modal" data-target="#modal_thankyou" type="button">Submit</button>
 						</div>
 						<!-- / -->
@@ -1581,19 +1571,29 @@
 		<script src="scripts/bootstrap.min.js"></script> 
 		<script src="scripts/bootstrap-tempusdominus.min.js"></script>
 		<script src="scripts/slick.js"></script>
-		<script src="scripts/parallax.js"></script>
-		<script src="scripts/menuFullpage.min.js"></script>
+		<script src="scripts/menufullpage.min.js"></script>
 		<script src="scripts/scrollreveal.js"></script>
 		<script src="scripts/smooth-scroll.js"></script>
 		<script src="scripts/scripts.js"></script>
 		<script src="scripts/customscrollbar.js"></script>
 		<script type="text/javascript">
+			// Modal Newsletter Show onScroll
 			$(window).scroll(function() {
 				if ($(document).scrollTop() > 3000 && $("#modal_newsletter").attr("displayed") === "false") {
 					$('#modal_newsletter').modal('show');
 					$("#modal_newsletter").attr("displayed", "true");
 				}
 			});
+
+			// Dropdown Multiple Select
+			$(document).ready(function(){
+                var multipleCancelButton = new Choices('#what_services_new', {
+                    removeItemButton: true,
+                    /*maxItemCount: 5,
+                    searchResultLimit: 5,
+                    renderChoiceLimit: 5*/
+                });
+            });
 		</script>
 	</body>
 </html>

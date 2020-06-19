@@ -127,3 +127,15 @@ input[type="color"]:focus,
 .accordion .accordion-panel a { padding: 20px; display: block; }
 .accordion .accordion-panel i { float: right; line-height: 24px; color: #ad2bad; transition: 0.3s all; transform: rotate(0); }
 .accordion .accordion-panel .collapsed i { transform: rotate(180deg); }
+
+/* 06192020 */
+form .dropdown-toggle { border-radius: 3px; padding-left: 10px; padding-right: 30px; color: #AAAAAA; }
+form .dropdown-toggle:hover { /*color: #AAAAAA;*/ }
+form .dropdown-toggle::after { right: 10px; top: 25px; }
+form .dropdown-item { padding: 10px; font-weight: 300; color: #212529; }
+form .dropdown-menu { padding: 0; margin: 0; font-size: 14px; color: #212529; border-color: #0099ff; border-radius: 0; }
+
+.form-control { border-radius: 3px; padding: 12px 10px;  }
+.form-control::placeholder { color: #AAAAAA; transition: 0.3s all; }
+.form-control:hover::placeholder { color: #000000; }
+.form-timepicker .btn { border-radius: 3px; }

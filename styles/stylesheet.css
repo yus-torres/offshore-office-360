@@ -68,7 +68,6 @@ header .for-mobile .list-menu-item { display: block; }
 header .for-mobile .list-menu-item { margin: 0; }
 header .for-mobile .list-menu-item a { text-indent: 0 !important; }
 
-header.append { /*background: linear-gradient(rgba(47,43,173,1) 0%, rgba(173,43,173,1) 100%);*/ }
 header.append { background-color: rgba(47,43,173,1); box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4); }
 header.append .for-screen { padding-top: 20px; }
 header.append .for-screen .main-logo img { max-height: 50px; }
@@ -167,7 +166,6 @@ header .list-menu-item a:hover:before { width: 100%; }
 
 /* Fold: Clients */
 .fold-clients { padding: 100px 0 50px; background: #ad2bad; color: #FFFFFF; }
-.fold-clients { /*background: linear-gradient(rgba(173,43,173,1) 0%, rgba(47,43,173,1) 50%);*/ }
 
 /* Fold: Newsletter */
 .fold-newsletter { padding: 100px 0; background: #2f2bad; color: #FFFFFF; }
@@ -188,6 +186,10 @@ header .list-menu-item a:hover:before { width: 100%; }
 .deck-blog .card-date span { display: block; font-weight: bold; }
 .deck-blog .card-day { font-size: 32px; }
 .deck-blog .card-month { text-transform: uppercase; }
+
+/* Fold: Contact */
+.fold-contact { overflow-y: hidden; }
+.fold-contact .container { max-width: 1100px; }
 
 /* Footer */
 footer { color: #FFFFFF; padding-top: 150px; padding-bottom: 50px; overflow: hidden; }
