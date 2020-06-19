@@ -1573,6 +1573,11 @@
 		<script src="scripts/scripts.js"></script>
 		<script src="scripts/customscrollbar.js"></script>
 		<script type="text/javascript">
+			// Hide Preloader
+			setTimeout(function() {
+				$('.se-pre-con').fadeOut('fast');
+			}, 1000);
+
 			// Modal Newsletter Show onScroll
 			$(window).scroll(function() {
 				if ($(document).scrollTop() > 3000 && $("#modal_newsletter").attr("displayed") === "false") {
