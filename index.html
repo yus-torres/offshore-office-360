@@ -15,6 +15,10 @@
 		<link href="styles/menufullpage.css" rel="stylesheet">
 		<link href="styles/customscrollbar.css" rel="stylesheet">
 		<link href="styles/responsive.css" rel="stylesheet">
+		<link href="styles/choices.css" rel="stylesheet">
+
+		<!-- Initialize Scripts -->
+        <script src="scripts/choices.min.js"></script>
 	</head>
 
 	<body data-spy="scroll" data-target="#nav_menu">
@@ -1574,9 +1578,9 @@
 		<script src="scripts/customscrollbar.js"></script>
 		<script type="text/javascript">
 			// Hide Preloader
-			setTimeout(function() {
-				$('.se-pre-con').fadeOut('fast');
-			}, 1000);
+			//setTimeout(function() {
+			//	$('.se-pre-con').fadeOut('fast');
+			//}, 1000);
 
 			// Modal Newsletter Show onScroll
 			$(window).scroll(function() {
@@ -1585,6 +1589,16 @@
 					$("#modal_newsletter").attr("displayed", "true");
 				}
 			});
+
+			// Dropdown Multiple Select
+			$(document).ready(function(){
+                var multipleCancelButton = new Choices('#what_services_new', {
+                    removeItemButton: true,
+                    /*maxItemCount: 5,
+                    searchResultLimit: 5,
+                    renderChoiceLimit: 5*/
+                });
+            });
 		</script>
 	</body>
 </html>
