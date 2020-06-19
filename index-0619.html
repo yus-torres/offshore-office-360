@@ -15,6 +15,10 @@
 		<link rel="stylesheet" href="styles/menufullpage.css">
 		<link rel="stylesheet" href="styles/customscrollbar.css">
 		<link rel="stylesheet" href="styles/responsive.css">
+		<link rel="stylesheet" href="styles/choices.css">
+
+		<!-- Initialize Scripts -->
+        <script src="scripts/choices.min.js"></script>
 	</head>
 
 	<body data-spy="scroll" data-target="#nav_menu">
@@ -1580,6 +1584,16 @@
 					$("#modal_newsletter").attr("displayed", "true");
 				}
 			});
+
+			// Dropdown Multiple Select
+			$(document).ready(function(){
+                var multipleCancelButton = new Choices('#what_services_new', {
+                    removeItemButton: true,
+                    /*maxItemCount: 5,
+                    searchResultLimit: 5,
+                    renderChoiceLimit: 5*/
+                });
+            });
 		</script>
 	</body>
 </html>
