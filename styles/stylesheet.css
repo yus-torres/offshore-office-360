@@ -83,7 +83,7 @@ header .list-menu-item a.active { color: #FBED8A; color: #0099ff; }
 header .list-menu-item a:hover:before { width: 100%; }
 
 /* Fold: Main */
-.fold-main { background-attachment: scroll; background-color: #FBED8A; color: #FFFFFF; }
+.fold-main { background-attachment: scroll; background-color: /*#FBED8A*/ #00002c; color: #FFFFFF; }
 .fold-main { display: flex; background-position-y: top; background-size: cover; }
 .fold-main .container { align-self: center; }
 .fold-main .container .row { display: flex; align-items: center; }
